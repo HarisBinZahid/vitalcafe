@@ -1,0 +1,8 @@
+{
+  "name": "vitalcafe",
+  "app_id": "1148b02b",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
