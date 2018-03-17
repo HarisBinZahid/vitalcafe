@@ -28,3 +28,24 @@ import { HomePage } from '../pages/home/home';
   ]
 })
 export class AppModule {}
+
+import { IonicStorageModule } from '@ionic/storage';
+
+@NgModule({
+  declarations: [
+    // ...
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    // ...
+  ],
+  providers: [
+    // ...
+  ]
+})
+export class AppModule {}
