@@ -41,6 +41,6 @@ export class HomePage {
     });
 
     promise.then(_ => this.showAlert("Your order has been submitted successfully"))
-    .catch(err => this.showAlert("something wrong fucker"));}
+    .catch(err => this.showAlert("something went wrong please try again..!!"));}
 
 }
