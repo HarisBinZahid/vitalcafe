@@ -1,29 +1,31 @@
 <ion-header>
-  <ion-toolbar color="primary">
-   <ion-title><img src="assets/imgs/logo.png"></ion-title>
-  </ion-toolbar>
+  <ion-navbar color="primary">
+   <ion-title>
+     Home
+  </ion-title>   
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
     
 <ion-list>
 <ion-item>
-    <ion-label stacked>Name</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating>Name</ion-label>
+    <ion-input type="text" [(ngModel)]="OrderItem.orderername"></ion-input>
   </ion-item>
 </ion-list>
 
 <ion-list>
   <ion-item>
-    <ion-label stacked>Description (if any)</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-label floating>Description (if any)</ion-label>
+    <ion-input type="text" [(ngModel)]="OrderItem.orderdesc"></ion-input>
   </ion-item>
 </ion-list>
 
  <ion-list>
   <ion-item>
-    <ion-label stacked>Product Type</ion-label>
-    <ion-select [(ngModel)]="type">
+    <ion-label floating>Product Type</ion-label>
+    <ion-select [(ngModel)]="OrderItem.prodtype">
       <ion-option value="tea">Tea</ion-option>
       <ion-option value="coffee">Coffee</ion-option>
       <ion-option value="green-tea">Green Tea</ion-option>
@@ -34,30 +36,30 @@
 
  <ion-list>
   <ion-item>
-    <ion-label stacked>Select Hall Number</ion-label>
-    <ion-select [(ngModel)]="hall">
-      <ion-option value="1">Hall 1</ion-option>
-      <ion-option value="2">Hall 2</ion-option>
-      <ion-option value="3">Hall 3</ion-option>
+    <ion-label floating>Select Hall Number</ion-label>
+    <ion-select [(ngModel)]="OrderItem.hall">
+      <ion-option value="hall1">Hall 1</ion-option>
+      <ion-option value="hall2">Hall 2</ion-option>
+      <ion-option value="hall3">Hall 3</ion-option>
     </ion-select>
   </ion-item>
 </ion-list> 
 
  <ion-list>
   <ion-item>
-    <ion-label stacked>Select Booth Number</ion-label>
-    <ion-select [(ngModel)]="Booth">
-      <ion-option value="1">Booth 1</ion-option>
-      <ion-option value="2">Booth 2</ion-option>
-      <ion-option value="3">Booth 3</ion-option>
+    <ion-label floating>Select Booth Number</ion-label>
+    <ion-select [(ngModel)]="OrderItem.booth">
+      <ion-option value="booth1">Booth 1</ion-option>
+      <ion-option value="booth2">Booth 2</ion-option>
+      <ion-option value="booth3">Booth 3</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
  
  
-<button ion-button round>Submit</button>
+<button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>
 
-
+<!-- <button ion-button round (click)="load()">Go To Login</button> -->
 
 
 
@@ -65,4 +67,4 @@
   <!-- <p>
     <button ion-button color="primary" menuToggle>Toggle Menu</button>
   </p> -->
-</ion-content>
+</ion-content> 

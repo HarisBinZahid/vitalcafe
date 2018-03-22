@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Welcome To Vital Cafe</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="navigateToHomePage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <img src="assets/imgs/logo.png" (click)="navigateToHomePage()" />
+  </ion-card>
+</ion-content>
