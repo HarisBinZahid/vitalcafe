@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { OrderItem } from '../../models/order-item/order-item.interface';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AlertController } from 'ionic-angular';
+import { ViewOrderPage } from '../view-order/view-order';
 
 @Component({
   selector: 'page-home',
@@ -31,7 +32,7 @@ export class HomePage {
       alert.present();
     }
 
-  addOrderItem(orderItem: OrderItem){
+    addOrderItem(orderItem: OrderItem){
       const promise = this.ref.push({
       orderername: orderItem.orderername,
       orderdesc: orderItem.orderdesc,
@@ -42,5 +43,10 @@ export class HomePage {
 
     promise.then(_ => this.showAlert("Your order has been submitted successfully"))
     .catch(err => this.showAlert("Something went wrong please try again..!!"));}
+  
+    navigateToOrderPage() {
+    this.navCtrl.push(ViewOrderPage);
+  }
+  
 
 }

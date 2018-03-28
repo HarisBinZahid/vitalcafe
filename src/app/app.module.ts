@@ -8,6 +8,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AddDataPage } from '../pages/add-data/add-data';
 import { MyHomePage } from '../pages/my-home/my-home';
+import { ViewOrderPage } from '../pages/view-order/view-order';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -18,7 +19,8 @@ import { FIREBASE_CREDENTIALS } from './firebase.credentials';
     MyApp,
     HomePage,
     AddDataPage,
-    MyHomePage 
+    MyHomePage,
+    ViewOrderPage 
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { FIREBASE_CREDENTIALS } from './firebase.credentials';
     MyApp,
     HomePage,
     AddDataPage,
-    MyHomePage
+    MyHomePage,
+    ViewOrderPage
   ],
   providers: [
     StatusBar,

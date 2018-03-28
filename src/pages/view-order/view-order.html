@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ViewOrderPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Order List</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list>
+  <ion-item class="text" *ngFor="let item of orders | async; index as i">
+    <h6><b>Order #:</b> ({{i}}).<br> <b>Person Name:</b> {{item.orderername}}</h6>
+    <h6><b>Order Description:</b> {{item.orderdesc }}</h6>
+    <h6><b>Product Type:</b> {{item.prodtype}}</h6>
+    <h6><b>Hall #:</b> {{item.hall}}</h6>
+    <h6><b>Booth:</b> {{item.booth}}</h6>
+    <!-- <ion-list>
+        <button ion-item *ngFor="let item of orders | async; index as i" (click)="navigateToOrder(item)">
+          {{ item.orderername }}
+        </button>
+      </ion-list>  -->
+  </ion-item>
+</ion-list>
+</ion-content>

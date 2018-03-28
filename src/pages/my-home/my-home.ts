@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { OrderItem } from '../../models/order-item/order-item.interface';
+
 @Component({
   selector: 'page-my-home',
   templateUrl: 'my-home.html',
@@ -16,11 +17,8 @@ export class MyHomePage {
 
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, afDB: AngularFireDatabase) {
-    this.ref = afDB.list('/Orders/').valueChanges().subscribe(data => {
-      console.log(data);
-    })
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    }
     
 
   // Navigate the user to the Home Page

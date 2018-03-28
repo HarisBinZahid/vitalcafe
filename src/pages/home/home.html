@@ -45,19 +45,18 @@
   </ion-item>
 </ion-list> 
 
- <ion-list>
+
+<ion-list>
   <ion-item>
-    <ion-label floating>Select Booth Number</ion-label>
-    <ion-select [(ngModel)]="OrderItem.booth">
-      <ion-option value="booth1">Booth 1</ion-option>
-      <ion-option value="booth2">Booth 2</ion-option>
-      <ion-option value="booth3">Booth 3</ion-option>
-    </ion-select>
+    <ion-label floating>Booth Number</ion-label>
+    <ion-input type="text" [(ngModel)]="OrderItem.booth"></ion-input>
   </ion-item>
 </ion-list>
  
  
 <button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>
+
+<button ion-button block (click)="navigateToOrderPage()">View Orders</button>
 
 <!-- <button ion-button round (click)="load()">Go To Login</button> -->
 
