@@ -1,18 +1,61 @@
-<!--
-  Generated template for the AddOrderPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>add-order</ion-title>
+  <ion-navbar color="primary">
+    <ion-title>
+      Home
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="OrderItem.orderername"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Description (if any)</ion-label>
+      <ion-input type="text" [(ngModel)]="OrderItem.orderdesc"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Product Type</ion-label>
+      <ion-select [(ngModel)]="OrderItem.prodtype" multiple="true">
+        <ion-option value="tea">Tea</ion-option>
+        <ion-option value="coffee">Coffee</ion-option>
+        <ion-option value="green-tea">Green Tea</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Select Hall Number</ion-label>
+      <ion-select [(ngModel)]="OrderItem.hall">
+        <ion-option value="hall1">Hall 1</ion-option>
+        <ion-option value="hall2">Hall 2</ion-option>
+        <ion-option value="hall3">Hall 3</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Booth Number</ion-label>
+      <ion-input type="text" [(ngModel)]="OrderItem.booth"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>
+
+  <button ion-button block (click)="navigateToOrderPage()">View Orders</button>
 
 </ion-content>

@@ -1,69 +1,23 @@
 <ion-header>
+
   <ion-navbar color="primary">
-   <ion-title>
-     Home
-  </ion-title>   
+    <ion-title>Welcome To Vital Cafe</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="navigateToAddOrderPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-    
-<ion-list>
-<ion-item>
-    <ion-label floating>Name</ion-label>
-    <ion-input type="text" [(ngModel)]="OrderItem.orderername"></ion-input>
-  </ion-item>
-</ion-list>
-
-<ion-list>
-  <ion-item>
-    <ion-label floating>Description (if any)</ion-label>
-    <ion-input type="text" [(ngModel)]="OrderItem.orderdesc"></ion-input>
-  </ion-item>
-</ion-list>
-
- <ion-list>
-  <ion-item>
-    <ion-label floating>Product Type</ion-label>
-    <ion-select [(ngModel)]="OrderItem.prodtype" multiple="true">
-      <ion-option value="tea">Tea</ion-option>
-      <ion-option value="coffee">Coffee</ion-option>
-      <ion-option value="green-tea">Green Tea</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
-
-
- <ion-list>
-  <ion-item>
-    <ion-label floating>Select Hall Number</ion-label>
-    <ion-select [(ngModel)]="OrderItem.hall">
-      <ion-option value="hall1">Hall 1</ion-option>
-      <ion-option value="hall2">Hall 2</ion-option>
-      <ion-option value="hall3">Hall 3</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-list> 
-
-
-<ion-list>
-  <ion-item>
-    <ion-label floating>Booth Number</ion-label>
-    <ion-input type="text" [(ngModel)]="OrderItem.booth"></ion-input>
-  </ion-item>
-</ion-list>
- 
- 
-<button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>
-
-<button ion-button block (click)="navigateToOrderPage()">View Orders</button>
-
-<!-- <button ion-button round (click)="load()">Go To Login</button> -->
-
-
-
-
-  <!-- <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p> -->
-</ion-content> 
+  <ion-card>
+    <img src="assets/imgs/logo.png" (click)="navigateToAddOrderPage()" />
+  </ion-card>
+  <h6 margin ion-text color="primary">Note:</h6>
+  <p margin ion-text color="primary">In order to proceed with order click on picture or click at ("
+    <ion-icon name="add"></ion-icon> " icon).</p>
+</ion-content>

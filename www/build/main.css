@@ -25678,7 +25678,7 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
-page-my-home .card-background-page ion-card {
+page-home .card-background-page ion-card {
   position: absolute;
   text-align: center;
 }

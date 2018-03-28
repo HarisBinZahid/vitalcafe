@@ -5,22 +5,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { AddDataPage } from '../pages/add-data/add-data';
-import { MyHomePage } from '../pages/my-home/my-home';
-import { ViewOrderPage } from '../pages/view-order/view-order';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
+import { HomePage } from '../pages/home/home';
+import { ViewOrderPage } from '../pages/view-order/view-order';
+import { AddOrderPage } from '../pages/add-order/add-order';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    AddDataPage,
-    MyHomePage,
-    ViewOrderPage 
+    ViewOrderPage,
+    AddOrderPage 
   ],
   imports: [
     BrowserModule,
@@ -37,9 +35,8 @@ import { FIREBASE_CREDENTIALS } from './firebase.credentials';
   entryComponents: [
     MyApp,
     HomePage,
-    AddDataPage,
-    MyHomePage,
-    ViewOrderPage
+    ViewOrderPage,
+    AddOrderPage
   ],
   providers: [
     StatusBar,
