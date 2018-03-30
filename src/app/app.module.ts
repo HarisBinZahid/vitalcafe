@@ -9,16 +9,22 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials';
+
+
 import { HomePage } from '../pages/home/home';
 import { ViewOrderPage } from '../pages/view-order/view-order';
 import { AddOrderPage } from '../pages/add-order/add-order';
+import { SignupPage } from '../pages/signup/signup';
+import { LoginPage } from '../pages/login/login';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ViewOrderPage,
-    AddOrderPage 
+    AddOrderPage,
+    SignupPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +42,9 @@ import { AddOrderPage } from '../pages/add-order/add-order';
     MyApp,
     HomePage,
     ViewOrderPage,
-    AddOrderPage
+    AddOrderPage,
+    SignupPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
