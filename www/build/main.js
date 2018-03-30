@@ -189,19 +189,19 @@ var SlidesPage = (function () {
         this.navParams = navParams;
         this.slides = [
             {
-                title: "Welcome to the Docs!",
+                title: "Welcome to the Vital Cafe!",
                 description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
-                image: "assets/img/ica-slidebox-img-1.png",
+                image: "assets/imgs/logo.png",
             },
             {
-                title: "What is Ionic?",
+                title: "What is Vital Cafe?",
                 description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-                image: "assets/img/ica-slidebox-img-2.png",
+                image: "assets/imgs/logo.png",
             },
             {
-                title: "What is Ionic Cloud?",
+                title: "How to use Vital Cafe?",
                 description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
-                image: "assets/img/ica-slidebox-img-3.png",
+                image: "assets/imgs/logo.png",
             }
         ];
     }
@@ -213,11 +213,12 @@ var SlidesPage = (function () {
     };
     SlidesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-slides',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\slides\slides.html"*/'<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n  <ion-slides pager>\n    <ion-slide *ngFor="let slide of slides">\n      <ion-toolbar>\n        <ion-buttons end>\n          <button ion-button color="primary" (click)="navigateToLoginPage()">Skip</button>\n        </ion-buttons>\n      </ion-toolbar>\n      <img [src]="" class="slide-image" />\n      <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n      <p [innerHTML]="slide.description"></p>\n    </ion-slide>\n    <ion-slide>\n      <ion-toolbar>\n      </ion-toolbar>\n      <img src="assets/imgs/logo.png" class="slide-image" />\n      <h2 class="slide-title">Ready to Play?</h2>\n      <button ion-button large clear icon-end color="primary" (click)="navigateToLoginPage()">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\slides\slides.html"*/,
+            selector: 'page-slides',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\slides\slides.html"*/'<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n  <ion-slides pager>\n    <ion-slide *ngFor="let slide of slides">\n      <ion-toolbar>\n        <ion-buttons end>\n          <button ion-button color="primary" (click)="navigateToLoginPage()">Skip</button>\n        </ion-buttons>\n      </ion-toolbar>\n      <img [src]="slide.image" class="slide-image" />\n      <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n      <p [innerHTML]="slide.description"></p>\n    </ion-slide>\n    <ion-slide>\n      <ion-toolbar>\n      </ion-toolbar>\n      <img src="assets/imgs/logo.png" class="slide-image" />\n      <h2 class="slide-title">Ready to Play?</h2>\n      <button ion-button large clear icon-end color="primary" (click)="navigateToLoginPage()">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\slides\slides.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
     ], SlidesPage);
     return SlidesPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=slides.js.map
