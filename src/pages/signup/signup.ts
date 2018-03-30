@@ -19,6 +19,10 @@ export class SignupPage {
   navigateToLoginPage() {
     this.navCtrl.setRoot(LoginPage);
   }
+  // Navigating the user to the Signup Page
+  navigateToSignupPage() {
+    this.navCtrl.push(LoginPage);
+  }
 
   async signup(user: User){
     try {

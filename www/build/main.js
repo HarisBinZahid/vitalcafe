@@ -1,4 +1,4 @@
-webpackJsonp([4],{
+webpackJsonp([5],{
 
 /***/ 136:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -6,7 +6,7 @@ webpackJsonp([4],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ViewOrderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -51,7 +51,7 @@ var ViewOrderPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(71);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -102,12 +102,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-/**
- * Generated class for the SignupPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 var SignupPage = (function () {
     function SignupPage(afAuth, toast, navCtrl, navParams) {
         this.afAuth = afAuth;
@@ -119,6 +113,10 @@ var SignupPage = (function () {
     // Navigating the user to the Login Page
     SignupPage.prototype.navigateToLoginPage = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    // Navigating the user to the Signup Page
+    SignupPage.prototype.navigateToSignupPage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
     };
     SignupPage.prototype.signup = function (user) {
         return __awaiter(this, void 0, void 0, function () {
@@ -159,7 +157,74 @@ var SignupPage = (function () {
 
 /***/ }),
 
-/***/ 149:
+/***/ 138:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SlidesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(77);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the SlidesPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SlidesPage = (function () {
+    function SlidesPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.slides = [
+            {
+                title: "Welcome to the Docs!",
+                description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+                image: "assets/img/ica-slidebox-img-1.png",
+            },
+            {
+                title: "What is Ionic?",
+                description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
+                image: "assets/img/ica-slidebox-img-2.png",
+            },
+            {
+                title: "What is Ionic Cloud?",
+                description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+                image: "assets/img/ica-slidebox-img-3.png",
+            }
+        ];
+    }
+    SlidesPage.prototype.navigateToLoginPage = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    SlidesPage.prototype.ionViewWillLoad = function () {
+        this.slides;
+    };
+    SlidesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-slides',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\slides\slides.html"*/'<!-- <ion-header>\n\n  <ion-navbar>\n    <ion-title></ion-title>\n  </ion-navbar>\n\n</ion-header> -->\n\n\n<ion-content padding>\n  <ion-slides pager>\n    <ion-slide *ngFor="let slide of slides">\n      <ion-toolbar>\n        <ion-buttons end>\n          <button ion-button color="primary" (click)="navigateToLoginPage()">Skip</button>\n        </ion-buttons>\n      </ion-toolbar>\n      <img [src]="" class="slide-image" />\n      <h2 class="slide-title" [innerHTML]="slide.title"></h2>\n      <p [innerHTML]="slide.description"></p>\n    </ion-slide>\n    <ion-slide>\n      <ion-toolbar>\n      </ion-toolbar>\n      <img src="assets/imgs/logo.png" class="slide-image" />\n      <h2 class="slide-title">Ready to Play?</h2>\n      <button ion-button large clear icon-end color="primary" (click)="navigateToLoginPage()">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n  </ion-slides>\n</ion-content>\n'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\slides\slides.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    ], SlidesPage);
+    return SlidesPage;
+}());
+
+//# sourceMappingURL=slides.js.map
+
+/***/ }),
+
+/***/ 150:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -172,28 +237,32 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 149;
+webpackEmptyAsyncContext.id = 150;
 
 /***/ }),
 
-/***/ 192:
+/***/ 193:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/add-order/add-order.module": [
-		444,
-		3
+		445,
+		4
 	],
 	"../pages/login/login.module": [
-		445,
-		2
+		446,
+		3
 	],
 	"../pages/signup/signup.module": [
 		447,
+		2
+	],
+	"../pages/slides/slides.module": [
+		448,
 		1
 	],
 	"../pages/view-order/view-order.module": [
-		446,
+		449,
 		0
 	]
 };
@@ -208,18 +277,18 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 192;
+webpackAsyncContext.id = 193;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 241:
+/***/ 242:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__add_order_add_order__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -270,23 +339,22 @@ var HomePage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-home',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Welcome To Vital Cafe</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="navigateToAddOrderPage()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-card>\n    <img src="assets/imgs/logo.png"/>\n  </ion-card>\n  <!-- <h6 margin ion-text color="primary">Note:</h6>\n  <p margin ion-text color="primary">In order to proceed with order click on picture or click at ("\n    <ion-icon name="add"></ion-icon> " icon).</p> -->\n\n  <ion-grid>\n    <ion-row end>\n      <!-- <ion-col>\n        <div>1 of 3</div>\n      </ion-col>\n      <ion-col col-6>\n        <div>2 of 3 (wider)</div>\n      </ion-col> -->\n      <ion-col>\n        <div>3 of 3</div>\n      </ion-col>\n    </ion-row>\n    <!-- <ion-row>\n      <ion-col col-6>\n        <div>1 of 3 (wider)</div>\n      </ion-col>\n      <ion-col>\n        <div>2 of 3</div>\n      </ion-col>\n      <ion-col>\n        <div>3 of 3</div>\n      </ion-col>\n    </ion-row> -->\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\home\home.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
     ], HomePage);
     return HomePage;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=home.js.map
 
 /***/ }),
 
-/***/ 285:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(307);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -294,32 +362,34 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 306:
+/***/ 307:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(443);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2_database__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2_auth__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__firebase_credentials__ = __webpack_require__(443);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__firebase_credentials__ = __webpack_require__(444);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_home__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_view_order_view_order__ = __webpack_require__(136);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_add_order_add_order__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_login_login__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_slides_slides__ = __webpack_require__(138);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -346,7 +416,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__pages_view_order_view_order__["a" /* ViewOrderPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_add_order_add_order__["a" /* AddOrderPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_login_login__["a" /* LoginPage */]
+                __WEBPACK_IMPORTED_MODULE_14__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_slides_slides__["a" /* SlidesPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -354,8 +425,9 @@ var AppModule = (function () {
                     links: [
                         { loadChildren: '../pages/add-order/add-order.module#AddOrderPageModule', name: 'AddOrderPage', segment: 'add-order', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/view-order/view-order.module#ViewOrderPageModule', name: 'ViewOrderPage', segment: 'view-order', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/slides/slides.module#SlidesPageModule', name: 'SlidesPage', segment: 'slides', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/view-order/view-order.module#ViewOrderPageModule', name: 'ViewOrderPage', segment: 'view-order', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 //Initialize AngularFire with credentials from the dashboard
@@ -373,7 +445,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_11__pages_view_order_view_order__["a" /* ViewOrderPage */],
                 __WEBPACK_IMPORTED_MODULE_12__pages_add_order_add_order__["a" /* AddOrderPage */],
                 __WEBPACK_IMPORTED_MODULE_13__pages_signup_signup__["a" /* SignupPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_login_login__["a" /* LoginPage */]
+                __WEBPACK_IMPORTED_MODULE_14__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_slides_slides__["a" /* SlidesPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -390,16 +463,16 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 442:
+/***/ 443:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(284);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(281);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_slides_slides__ = __webpack_require__(138);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -416,7 +489,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = (function () {
     function MyApp(platform, statusBar, splashScreen) {
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_slides_slides__["a" /* SlidesPage */];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
             // Here you can do any higher level native things you might need.
@@ -436,7 +509,7 @@ var MyApp = (function () {
 
 /***/ }),
 
-/***/ 443:
+/***/ 444:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -459,7 +532,7 @@ var FIREBASE_CREDENTIALS = {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddOrderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__view_order_view_order__ = __webpack_require__(136);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -511,7 +584,7 @@ var AddOrderPage = (function () {
     };
     AddOrderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-add-order',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\add-order\add-order.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Home\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <!-- <ion-list>\n    <ion-item>\n      <ion-label floating>Name</ion-label>\n      <ion-input type="text" [(ngModel)]="OrderItem.orderername"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Description (if any)</ion-label>\n      <ion-input type="text" [(ngModel)]="OrderItem.orderdesc"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Product Type</ion-label>\n      <ion-select [(ngModel)]="OrderItem.prodtype" multiple="true">\n        <ion-option value="tea">Tea</ion-option>\n        <ion-option value="coffee">Coffee</ion-option>\n        <ion-option value="green-tea">Green Tea</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Select Hall Number</ion-label>\n      <ion-select [(ngModel)]="OrderItem.hall">\n        <ion-option value="hall1">Hall 1</ion-option>\n        <ion-option value="hall6">Hall 6</ion-option>\n        <ion-option value="hall3">Hall 3</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Booth Number</ion-label>\n      <ion-input type="text" [(ngModel)]="OrderItem.booth"></ion-input>\n    </ion-item>\n  </ion-list> -->\n\n\n  <div padding>\n    <ion-segment [(ngModel)]="products">\n      <ion-segment-button value="tea">\n        Tea\n      </ion-segment-button>\n      <ion-segment-button value="green Tea">\n        Green Tea\n      </ion-segment-button>\n      <ion-segment-button value="coffee">\n        Coffee\n      </ion-segment-button>\n      <ion-segment-button value="flavoured Tea">\n        Flavoured Tea\n      </ion-segment-button>\n    </ion-segment>\n  </div>\n  \n  <div [ngSwitch]="products">\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Jasmine.png">\n        </ion-thumbnail>\n        <h6>Jasmine Green Tea</h6>\n      </ion-item>\n        <ion-item>\n          <ion-input type="text" [(ngModel)]="OrderItem.booth" clearInput></ion-input>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Lemontea.png">\n        </ion-thumbnail>\n        <h6>Lemon Green Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Cardamom.png">\n        </ion-thumbnail>\n        <h6>Cardamom Green Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Plain-green-tea.png">\n        </ion-thumbnail>\n        <h6>Plain Green Tea</h6>\n      </ion-item>\n    </ion-list>\n  \n    <ion-list *ngSwitchCase="\'tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Premium tea.png">\n        </ion-thumbnail>\n        <h6>Black Tea Premium Dane</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Dawn.png">\n        </ion-thumbnail>\n        <h6>Dawn Mixture</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/surhan.png">\n        </ion-thumbnail>\n        <h6>Surhan Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'coffee\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-thumbnail>\n        <h6>Coffee</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/earl-gray.png">\n        </ion-thumbnail>\n        <h6>Earl Grey Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/EnglishBreakfast.png">\n        </ion-thumbnail>\n        <h6>English Breakfast Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Ginger.png">\n        </ion-thumbnail>\n        <h6>Ginger Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Masala.png">\n        </ion-thumbnail>\n        <h6>Masala Tea</h6>\n      </ion-item>\n    </ion-list>\n\n\n  </div>\n\n  <button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>\n\n  <button ion-button block (click)="navigateToOrderPage()">View Orders</button>\n\n</ion-content>'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\add-order\add-order.html"*/,
+            selector: 'page-add-order',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\add-order\add-order.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <ion-title>\n      Select Product\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <!-- <ion-list>\n    <ion-item>\n      <ion-label floating>Name</ion-label>\n      <ion-input type="text" [(ngModel)]="OrderItem.orderername"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Description (if any)</ion-label>\n      <ion-input type="text" [(ngModel)]="OrderItem.orderdesc"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Product Type</ion-label>\n      <ion-select [(ngModel)]="OrderItem.prodtype" multiple="true">\n        <ion-option value="tea">Tea</ion-option>\n        <ion-option value="coffee">Coffee</ion-option>\n        <ion-option value="green-tea">Green Tea</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Select Hall Number</ion-label>\n      <ion-select [(ngModel)]="OrderItem.hall">\n        <ion-option value="hall1">Hall 1</ion-option>\n        <ion-option value="hall6">Hall 6</ion-option>\n        <ion-option value="hall3">Hall 3</ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n\n  <ion-list>\n    <ion-item>\n      <ion-label floating>Booth Number</ion-label>\n      <ion-input type="text" [(ngModel)]="OrderItem.booth"></ion-input>\n    </ion-item>\n  </ion-list> -->\n\n\n  <div padding>\n    <ion-segment [(ngModel)]="products">\n      <ion-segment-button value="tea">\n        Tea\n      </ion-segment-button>\n      <ion-segment-button value="green Tea">\n        Green Tea\n      </ion-segment-button>\n      <ion-segment-button value="coffee">\n        Coffee\n      </ion-segment-button>\n      <ion-segment-button value="flavoured Tea">\n        Flavoured Tea\n      </ion-segment-button>\n    </ion-segment>\n  </div>\n  \n  <div [ngSwitch]="products">\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Jasmine.png">\n        </ion-thumbnail>\n        <h6>Jasmine Green Tea</h6>\n      </ion-item>\n        <ion-item>\n          <ion-input type="text" [(ngModel)]="OrderItem.booth" clearInput></ion-input>\n        </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Lemontea.png">\n        </ion-thumbnail>\n        <h6>Lemon Green Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Cardamom.png">\n        </ion-thumbnail>\n        <h6>Cardamom Green Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'green Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Plain-green-tea.png">\n        </ion-thumbnail>\n        <h6>Plain Green Tea</h6>\n      </ion-item>\n    </ion-list>\n  \n    <ion-list *ngSwitchCase="\'tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Premium tea.png">\n        </ion-thumbnail>\n        <h6>Black Tea Premium Dane</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Dawn.png">\n        </ion-thumbnail>\n        <h6>Dawn Mixture</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/surhan.png">\n        </ion-thumbnail>\n        <h6>Surhan Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'coffee\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/logo.png">\n        </ion-thumbnail>\n        <h6>Coffee</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/earl-gray.png">\n        </ion-thumbnail>\n        <h6>Earl Grey Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/EnglishBreakfast.png">\n        </ion-thumbnail>\n        <h6>English Breakfast Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Ginger.png">\n        </ion-thumbnail>\n        <h6>Ginger Tea</h6>\n      </ion-item>\n    </ion-list>\n\n    <ion-list *ngSwitchCase="\'flavoured Tea\'">\n      <ion-item>\n        <ion-thumbnail item-start>\n          <img src="assets/imgs/Masala.png">\n        </ion-thumbnail>\n        <h6>Masala Tea</h6>\n      </ion-item>\n    </ion-list>\n\n\n  </div>\n\n  <button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>\n\n  <button ion-button block (click)="navigateToOrderPage()">View Orders</button>\n\n</ion-content>'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\add-order\add-order.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */]])
     ], AddOrderPage);
@@ -528,10 +601,10 @@ var AddOrderPage = (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__add_order_add_order__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__signup_signup__ = __webpack_require__(137);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -593,13 +666,13 @@ var LoginPage = (function () {
         this.loadingCtrl = loadingCtrl;
         this.user = {};
     }
-    LoginPage.prototype.presentLoading = function () {
-        var loader = this.loadingCtrl.create({
-            content: "Please wait...",
-            duration: 3000
-        });
-        loader.present();
-    };
+    // presentLoading() {
+    //   let loader = this.loadingCtrl.create({
+    //     content: "Please wait...",
+    //     duration: 3000
+    //   });
+    //   loader.present();
+    // }
     // Navigating the user to the AddOrder Page
     LoginPage.prototype.navigateToAddOrderPage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__add_order_add_order__["a" /* AddOrderPage */]);
@@ -632,9 +705,17 @@ var LoginPage = (function () {
             });
         });
     };
+    LoginPage.prototype.ionViewWillLoad = function () {
+        // let toast = this.toast.create({
+        //   message: 'Hi.',
+        //   showCloseButton: true,
+        //   closeButtonText: 'Ok'
+        // });
+        // toast.present();
+    };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<ion-list>\n\n  <ion-item>\n    <ion-label floating>Email</ion-label>\n    <ion-input type="text" [(ngModel)]="user.email" required="required"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password" [(ngModel)]="user.password" required="required"></ion-input>\n  </ion-item>\n\n  <br>\n  <button ion-button block (click)="login(user)">Login</button><br>\n  <button ion-button block color="light" (click)="navigateToSignupPage()">Signup</button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"C:\Users\HP\Desktop\vitalcafe\src\pages\login\login.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n\n  <ion-item>\n    <ion-label floating>Email</ion-label>\n    <ion-input type="text" [(ngModel)]="user.email" required="required"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input type="password" [(ngModel)]="user.password" required="required"></ion-input>\n  </ion-item>\n\n  <br>\n  <button ion-button block (click)="login(user)">Login</button><br>\n  <button ion-button block color="light" (click)="navigateToSignupPage()">Signup</button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\HP\Desktop\vitalcafe\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_angularfire2_auth__["a" /* AngularFireAuth */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */]])
     ], LoginPage);
@@ -645,5 +726,5 @@ var LoginPage = (function () {
 
 /***/ })
 
-},[285]);
+},[286]);
 //# sourceMappingURL=main.js.map

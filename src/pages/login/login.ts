@@ -21,13 +21,13 @@ export class LoginPage {
 
   constructor(private afAuth: AngularFireAuth, private toast: ToastController, public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
-  presentLoading() {
-    let loader = this.loadingCtrl.create({
-      content: "Please wait...",
-      duration: 3000
-    });
-    loader.present();
-  }
+  // presentLoading() {
+  //   let loader = this.loadingCtrl.create({
+  //     content: "Please wait...",
+  //     duration: 3000
+  //   });
+  //   loader.present();
+  // }
 
   // Navigating the user to the AddOrder Page
   navigateToAddOrderPage() {
@@ -38,6 +38,8 @@ export class LoginPage {
   navigateToSignupPage() {
     this.navCtrl.push(SignupPage);
   }
+
+  
 
   async login(user: User) {
     
@@ -54,6 +56,19 @@ export class LoginPage {
         }).present();
       }
 
+  }
+
+
+
+  ionViewWillLoad(){
+   
+      // let toast = this.toast.create({
+      //   message: 'Hi.',
+      //   showCloseButton: true,
+      //   closeButtonText: 'Ok'
+      // });
+      // toast.present();
+    
   }
 
   

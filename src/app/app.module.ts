@@ -16,6 +16,7 @@ import { ViewOrderPage } from '../pages/view-order/view-order';
 import { AddOrderPage } from '../pages/add-order/add-order';
 import { SignupPage } from '../pages/signup/signup';
 import { LoginPage } from '../pages/login/login';
+import { SlidesPage } from '../pages/slides/slides';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoginPage } from '../pages/login/login';
     ViewOrderPage,
     AddOrderPage,
     SignupPage,
-    LoginPage
+    LoginPage,
+    SlidesPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { LoginPage } from '../pages/login/login';
     ViewOrderPage,
     AddOrderPage,
     SignupPage,
-    LoginPage
+    LoginPage,
+    SlidesPage
   ],
   providers: [
     StatusBar,
