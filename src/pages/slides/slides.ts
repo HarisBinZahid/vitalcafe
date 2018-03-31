@@ -26,17 +26,17 @@ export class SlidesPage {
   slides = [
     {
       title: "Welcome to the Vital Cafe!",
-      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      description: "The <b>Vital Group</b> is one of the most dynamic business enterprises in Pakistan. The management philosophy of VG is strongly people oriented and quality oriented – this fine balance, We believe is our real Competitive Advantage!.",
       image: "assets/imgs/logo.png",
     },
     {
       title: "What is Vital Cafe?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
+      description: "<b>Vital Cafe</b> is a whole new concept to automate the process of ordering, <b>Vital Cafe</b> is an App where you can order vast variety of Tea (depend upon the availability) . Its an in house developed App & initially its being launching in Karachi Head Office (For office staff only).",
       image: "assets/imgs/logo.png",
     },
     {
       title: "How to use Vital Cafe?",
-      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+      description: "The <b>Vital Cafe</b> App provides order processing functionality. First you need to signup and create your account then login to select and submit your order, if you already have an account you can directly login to proceed with order.",
       image: "assets/imgs/logo.png",
     }
   ];
