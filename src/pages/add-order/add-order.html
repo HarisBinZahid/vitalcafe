@@ -1,14 +1,13 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Select Product
+      Select Products
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
-  <!-- <ion-list>
+ <!-- <ion-list>
     <ion-item>
       <ion-label floating>Name</ion-label>
       <ion-input type="text" [(ngModel)]="OrderItem.orderername"></ion-input>
@@ -70,47 +69,97 @@
       </ion-segment-button>
     </ion-segment>
   </div>
-  
   <div [ngSwitch]="products">
-    <ion-list *ngSwitchCase="'green Tea'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/Jasmine.png">
-        </ion-thumbnail>
-        <h6>Jasmine Green Tea</h6>
-      </ion-item>
-        <ion-item>
-          <ion-input type="text" [(ngModel)]="OrderItem.booth" clearInput></ion-input>
+    <!-- Green Tea -->
+  <!-- <ion-grid>
+    <ion-row end>
+      <ion-col col-8>
+
+          <ng-container  *ngSwitchCase="'green Tea'">
+            <ion-item class="text" >
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/Jasmine.png">
+              </ion-thumbnail>
+              <div *ngFor="let p of products">
+                 {{p.green-tea}}
+                <div *ngFor="let category of p.name">
+                  {{category.name}}
+                </div>
+              </div>
+              <h6>  Jasmine</h6>
+            </ion-item>
+          </ng-container>
+        </ion-col>
+        <ion-col col-4>
+          
+            <ion-item *ngSwitchCase="'green Tea'">
+              <ion-input type="number"></ion-input>
+            </ion-item>
+          
+        </ion-col>
+    </ion-row>
+  </ion-grid> -->
+
+    <ion-grid>
+      <ion-row end>
+        <ion-col col-8>  
+            <ion-item *ngSwitchCase="'green Tea'">
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/Lemontea.png">
+              </ion-thumbnail>
+              <h6>Lemon Green Tea</h6>
+            </ion-item>        
+        </ion-col>
+        <ion-col col-4>    
+          <ion-item *ngSwitchCase="'green Tea'">
+            <ion-input type="number"></ion-input>
+          </ion-item>    
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+    <ion-row end>
+      <ion-col col-8>  
+          <ion-item *ngSwitchCase="'green Tea'">
+            <ion-thumbnail item-start>
+              <img src="assets/imgs/Cardamom.png">
+            </ion-thumbnail>
+            <h6>Cardamom Green Tea</h6>
+          </ion-item>
+      </ion-col>
+      <ion-col col-4>    
+        <ion-item *ngSwitchCase="'green Tea'">
+          <ion-input type="number"></ion-input>
+        </ion-item>    
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+
+
+  <ion-grid>
+    <ion-row end>
+      <ion-col col-8>
+        <ion-item *ngSwitchCase="'green Tea'">
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/Plain-green-tea.png">
+          </ion-thumbnail>
+          <h6>Plain Green Tea</h6>
         </ion-item>
-    </ion-list>
+      </ion-col>
+      <ion-col col-4>
+        <ion-item *ngSwitchCase="'green Tea'">
+          <ion-input type="number"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <ion-list *ngSwitchCase="'green Tea'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/Lemontea.png">
-        </ion-thumbnail>
-        <h6>Lemon Green Tea</h6>
-      </ion-item>
-    </ion-list>
+<!-- /Green Tea -->
 
-    <ion-list *ngSwitchCase="'green Tea'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/Cardamom.png">
-        </ion-thumbnail>
-        <h6>Cardamom Green Tea</h6>
-      </ion-item>
-    </ion-list>
 
-    <ion-list *ngSwitchCase="'green Tea'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/imgs/Plain-green-tea.png">
-        </ion-thumbnail>
-        <h6>Plain Green Tea</h6>
-      </ion-item>
-    </ion-list>
-  
+  <!-- Tea -->
+
     <ion-list *ngSwitchCase="'tea'">
       <ion-item>
         <ion-thumbnail item-start>
@@ -137,7 +186,10 @@
         <h6>Surhan Tea</h6>
       </ion-item>
     </ion-list>
+<!-- /Tea -->
 
+
+<!-- Coffee -->
     <ion-list *ngSwitchCase="'coffee'">
       <ion-item>
         <ion-thumbnail item-start>
@@ -146,7 +198,10 @@
         <h6>Coffee</h6>
       </ion-item>
     </ion-list>
+<!-- /Coffee -->
 
+
+<!-- Flavoured Tea -->
     <ion-list *ngSwitchCase="'flavoured Tea'">
       <ion-item>
         <ion-thumbnail item-start>
@@ -183,6 +238,7 @@
       </ion-item>
     </ion-list>
 
+<!-- /Flavoured Tea -->
 
   </div>
 

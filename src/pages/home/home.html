@@ -1,13 +1,17 @@
 <ion-header>
-
+<!-- {{(profileData | async)?.firstName}} -->
   <ion-navbar color="primary">
-    <ion-title>Welcome To Vital Cafe</ion-title>
+    <ion-title>Welcome </ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="navigateToAddOrderPage()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
-
+<ion-buttons end>
+  <button ion-button icon-only (click)="signOut()">
+    Logout
+  </button>
+</ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -21,28 +25,5 @@
   <p margin ion-text color="primary">In order to proceed with order click on picture or click at ("
     <ion-icon name="add"></ion-icon> " icon).</p> -->
 
-  <ion-grid>
-    <ion-row end>
-      <!-- <ion-col>
-        <div>1 of 3</div>
-      </ion-col>
-      <ion-col col-6>
-        <div>2 of 3 (wider)</div>
-      </ion-col> -->
-      <ion-col>
-        <div>3 of 3</div>
-      </ion-col>
-    </ion-row>
-    <!-- <ion-row>
-      <ion-col col-6>
-        <div>1 of 3 (wider)</div>
-      </ion-col>
-      <ion-col>
-        <div>2 of 3</div>
-      </ion-col>
-      <ion-col>
-        <div>3 of 3</div>
-      </ion-col>
-    </ion-row> -->
-  </ion-grid>
+  
 </ion-content>

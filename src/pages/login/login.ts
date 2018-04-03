@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, ToastController } from 'ionic-angular';
-import { AddOrderPage } from '../add-order/add-order';
 import { User } from '../../models/users/user';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-
-import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 import { LoadingController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
 @Component({
@@ -29,16 +26,15 @@ export class LoginPage {
   //   loader.present();
   // }
 
-  // Navigating the user to the AddOrder Page
-  navigateToAddOrderPage() {
-    this.navCtrl.push(AddOrderPage);
-  }
+
 
   // Navigating the user to the Signup Page
   navigateToSignupPage() {
     this.navCtrl.push(SignupPage);
   }
-
+  navigateToProfilePage() {
+    this.navCtrl.push(ProfilePage);
+  }
   
 
   async login(user: User) {
@@ -46,7 +42,12 @@ export class LoginPage {
       const result = await this.afAuth.auth.signInAndRetrieveDataWithEmailAndPassword(user.email, user.password);
       console.log(result);
     if (result) {
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(ProfilePage, {}, {animate:true});
+      this.toast.create({
+        message: 'Note: If you are a new user and login first time, kindly create your profile here or if you already have created then simply skip to Home Page.',
+        showCloseButton: true,
+        closeButtonText: 'Ok'
+      }).present();
       }
     else{
         this.toast.create({
@@ -56,21 +57,6 @@ export class LoginPage {
         }).present();
       }
 
-  }
-
-
-
-  ionViewWillLoad(){
-   
-      // let toast = this.toast.create({
-      //   message: 'Hi.',
-      //   showCloseButton: true,
-      //   closeButtonText: 'Ok'
-      // });
-      // toast.present();
-    
-  }
-
-  
+  }  
   
 }

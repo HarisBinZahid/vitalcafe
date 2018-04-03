@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { LoginPage } from '../login/login';
 import { User } from '../../models/users/user';
 import { AngularFireAuth } from 'angularfire2/auth';
+import { ProfilePage } from '../profile/profile';
 
 @IonicPage()
 @Component({
@@ -24,19 +25,14 @@ export class SignupPage {
     this.navCtrl.push(LoginPage);
   }
 
+
   async signup(user: User){
-    try {
       const result = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
       this.toast.create({
-        message: 'Registered Successfully. Login to submit your order.',
+        message: 'You are Registered Successfully. Now login and create your profile.',
         showCloseButton: true,
         closeButtonText: 'Ok'
       }).present();
-      console.log(result);
-    }
-    catch (e) {
-      console.error(e);
-    }
     
   }
 

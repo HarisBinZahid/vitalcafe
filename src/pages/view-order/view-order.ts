@@ -4,12 +4,6 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { OrderItem } from '../../models/order-item/order-item.interface';
 import { Observable } from 'rxjs/Observable';
 
-/**
- * Generated class for the ViewOrderPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({

@@ -25678,6 +25678,18 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+page-add-order .item ion-thumbnail {
+  min-width: 3rem;
+  min-height: 3rem;
+}
+
+page-add-order .item ion-thumbnail img {
+  max-width: 4rem;
+  min-width: 4rem;
+  max-height: 4rem;
+  min-height: 4rem;
+}
+
 page-home .card-background-page ion-card {
   position: absolute;
   text-align: center;

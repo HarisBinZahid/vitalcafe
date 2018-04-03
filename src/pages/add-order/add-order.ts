@@ -43,9 +43,37 @@ export class AddOrderPage {
     promise.then(_ => this.showAlert("Your order has been submitted successfully"))
       .catch(err => this.showAlert("Something went wrong please try again..!!"));
   }
-
+// Navigating the user to the Order Page
   navigateToOrderPage() {
     this.navCtrl.push(ViewOrderPage);
   }
 
+  products = {
+    green_tea:  [
+      { name: "jasmine green tea" },
+      { name: "lemon green tea" },
+      { name: "plain green tea" },
+      { name: "cardamom green tea" }
+    ],
+
+    tea: [
+      { name: "black tea premium dane" },
+      { name: "dawn mixture" },
+      { name: "surhan tea" }
+    ],
+
+    coffee: [
+      { name: "black coffee" }
+    ],
+
+    flavoured_tea: [
+      { name: "earl grey" },
+      { name: "english breakfast" },
+      { name: "ginger" },
+      { name: "masala" }
+    ]
+  }
+
 }
+
+

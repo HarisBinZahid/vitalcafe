@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title> Create Profile</ion-title>
+    <ion-buttons end>
+        <button ion-button color="light" (click)="navigateToHomePage()">Skip</button>
+    </ion-buttons>   
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+     <ion-list>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.firstName"></ion-input>
+      </ion-item>
+    
+      
+ 
+ 
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.lastName"></ion-input>
+      </ion-item>
+    
+      
+
+    
+      <ion-item>
+        <ion-label floating>Event Name</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.eventName"></ion-input>
+      </ion-item>
+    
+      
+
+    
+      <ion-item>
+        <ion-label floating>Hall #</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.hall"></ion-input>
+      </ion-item>
+    
+      
+
+    
+          <ion-item>
+            <ion-label floating>Booth #</ion-label>
+            <ion-input type="text" [(ngModel)]="profile.booth"></ion-input>
+          </ion-item>
+    </ion-list>
+
+
+    <button ion-button block (click)="createProfile()">Create Profile</button>  
+</ion-content>

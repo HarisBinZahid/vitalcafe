@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-
-/**
- * Generated class for the SlidesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { AddOrderPage } from '../add-order/add-order';
 
 @IonicPage()
 @Component({
@@ -45,4 +39,6 @@ export class SlidesPage {
     this.slides;
   }
 
-}
+  }
+
+
