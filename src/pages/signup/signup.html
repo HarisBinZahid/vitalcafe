@@ -12,34 +12,21 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+  <img class="background-image" src="assets/imgs/login-background.png" alt="imagenotavailable">
+  <div id="container">
   <ion-list>
-
-    <ion-item>
+    <ion-item id="rounded">
       <ion-label floating>Email</ion-label>
       <ion-input type="text" [(ngModel)]="user.email"></ion-input>
     </ion-item>
 
-    <ion-item>
+    <ion-item id="rounded">
       <ion-label floating>Password</ion-label>
       <ion-input type="password" [(ngModel)]="user.password"></ion-input>
     </ion-item>
-
-    <!-- <ion-item>
-      <ion-label floating>Event Name</ion-label>
-      <ion-input type="text" [(ngModel)]="user.eventname"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating>Hall #</ion-label>
-      <ion-input type="number" [(ngModel)]="user.hall"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label floating>Booth #</ion-label>
-      <ion-input type="number" [(ngModel)]="user.booth"></ion-input>
-    </ion-item> -->
     <br>
     <button ion-button block (click)="signup(user)">Submit</button>
   </ion-list>
+  </div>
 </ion-content>

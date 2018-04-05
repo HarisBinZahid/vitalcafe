@@ -1,28 +1,30 @@
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar>
     <ion-title></ion-title>
   </ion-navbar>
 
+  <ion-buttons end>
+    <button ion-button icon-only (click)="navigateToAddOrderPage()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-header> -->
 
-</ion-header>
 
-
-<ion-content padding>
+<ion-content>
+<img class="background-image" src="assets/imgs/slide-background.jpg" alt="imagenotavailable">
+  
   <ion-slides pager>
     <ion-slide *ngFor="let slide of slides">
-      <ion-toolbar>
         <ion-buttons end>
           <button ion-button color="primary" (click)="navigateToLoginPage()">Skip</button>
         </ion-buttons>
-      </ion-toolbar>
       <img [src]="slide.image" class="slide-image" />
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
       <p [innerHTML]="slide.description"></p>
     </ion-slide>
     <ion-slide>
-      <ion-toolbar>
-      </ion-toolbar>
       <img src="assets/imgs/logo.png" class="slide-image" />
       <h2 class="slide-title">Ready to Start?</h2>
       <button ion-button large clear icon-end color="primary" (click)="navigateToLoginPage()">

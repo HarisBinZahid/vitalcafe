@@ -7,22 +7,22 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+<img class="background-image" src="assets/imgs/login-background.png" alt="imagenotavailable">
+<div id="container">
   <ion-list>
-
-  <ion-item>
+  <ion-item id="rounded">
     <ion-label floating>Email</ion-label>
     <ion-input type="text" [(ngModel)]="user.email" required="required"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item id="rounded">
     <ion-label floating>Password</ion-label>
     <ion-input type="password" [(ngModel)]="user.password" required="required"></ion-input>
   </ion-item>
-
   <br>
   <button ion-button block (click)="login(user)">Login</button><br>
   <button ion-button block color="light" (click)="navigateToSignupPage()">Signup</button>
 </ion-list>
+</div>
 </ion-content>

@@ -16,7 +16,7 @@ export class AddOrderPage {
   OrderItem = {} as OrderItem
   alertCtrl: any;
   ref: any;
-
+  product: string = "tea";
   constructor(public alert: AlertController, public navCtrl: NavController, public navParams: NavParams, afDB: AngularFireDatabase) {
     this.ref = afDB.list("Orders");
     this.alertCtrl = alert;
@@ -45,21 +45,21 @@ export class AddOrderPage {
   }
 // Navigating the user to the Order Page
   navigateToOrderPage() {
-    this.navCtrl.push(ViewOrderPage);
+    this.navCtrl.push(ViewOrderPage, {}, { animate: true });
   }
 
   products = {
-    green_tea:  [
-      { name: "jasmine green tea" },
-      { name: "lemon green tea" },
-      { name: "plain green tea" },
-      { name: "cardamom green tea" }
-    ],
-
     tea: [
       { name: "black tea premium dane" },
       { name: "dawn mixture" },
       { name: "surhan tea" }
+    ],
+
+    green_tea: [
+      { name: "jasmine green tea" },
+      { name: "lemon green tea" },
+      { name: "plain green tea" },
+      { name: "cardamom green tea" }
     ],
 
     coffee: [

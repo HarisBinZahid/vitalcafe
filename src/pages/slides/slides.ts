@@ -14,7 +14,7 @@ export class SlidesPage {
   }
 
   navigateToLoginPage() {
-    this.navCtrl.setRoot(LoginPage);
+    this.navCtrl.setRoot(LoginPage, {}, { animate: true });
   }
 
   slides = [
@@ -38,7 +38,11 @@ export class SlidesPage {
   ionViewWillLoad() {
     this.slides;
   }
-
+  //Navigating the user to the AddOrder Page
+  navigateToAddOrderPage() {
+    this.navCtrl.setRoot(AddOrderPage);
   }
+
+}
 
 

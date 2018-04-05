@@ -30,10 +30,10 @@ export class LoginPage {
 
   // Navigating the user to the Signup Page
   navigateToSignupPage() {
-    this.navCtrl.push(SignupPage);
+    this.navCtrl.push(SignupPage, {}, { animate: true });
   }
   navigateToProfilePage() {
-    this.navCtrl.push(ProfilePage);
+    this.navCtrl.push(ProfilePage, {}, { animate: true });
   }
   
 

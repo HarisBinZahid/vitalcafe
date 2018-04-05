@@ -35,15 +35,14 @@ export class ProfilePage {
       this.afDatabase.object(`Profiles/${auth.uid}`).set(this.profile)
       .then(_ => this.showAlert("Your profile has been created successfully"))
       .then(() => {
-        this.navCtrl.setRoot(HomePage)
+        this.navCtrl.setRoot(HomePage, {}, { animate: true })
       });
     })
    }
 
-// Navigating the user to the Home Page
-  navigateToHomePage() {
-    this.navCtrl.setRoot(HomePage);
-  }
+  navigateToHomePage() { 
+    this.navCtrl.setRoot(HomePage, {}, { animate: true })
+}
 
 
 }

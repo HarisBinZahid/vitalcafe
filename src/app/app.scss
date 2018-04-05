@@ -14,3 +14,12 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.background-image{
+    background-image: url('assets/imgs/login-background.png');
+    background-repeat: no-repeat !important;
+    background-size: auto !important;
+    width:100% !important; 
+    height:100% !important;
+    position: absolute;
+}

@@ -9,48 +9,38 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+<img class="background-image" src="assets/imgs/login-background.png" alt="imagenotavailable">
+<div id="container">
 
-
-     <ion-list>
-      <ion-item>
+    <ion-list>
+      <ion-item id="rounded">
         <ion-label floating>First Name</ion-label>
         <ion-input type="text" [(ngModel)]="profile.firstName"></ion-input>
       </ion-item>
     
-      
- 
- 
-      <ion-item>
+      <ion-item id="rounded">
         <ion-label floating>Last Name</ion-label>
         <ion-input type="text" [(ngModel)]="profile.lastName"></ion-input>
       </ion-item>
     
-      
-
     
-      <ion-item>
+      <ion-item id="rounded">
         <ion-label floating>Event Name</ion-label>
         <ion-input type="text" [(ngModel)]="profile.eventName"></ion-input>
       </ion-item>
     
       
-
-    
-      <ion-item>
+      <ion-item id="rounded">
         <ion-label floating>Hall #</ion-label>
         <ion-input type="text" [(ngModel)]="profile.hall"></ion-input>
       </ion-item>
-    
-      
 
-    
-          <ion-item>
-            <ion-label floating>Booth #</ion-label>
-            <ion-input type="text" [(ngModel)]="profile.booth"></ion-input>
-          </ion-item>
-    </ion-list>
-
-
-    <button ion-button block (click)="createProfile()">Create Profile</button>  
+      <ion-item id="rounded">
+          <ion-label floating>Booth #</ion-label>
+          <ion-input type="text" [(ngModel)]="profile.booth"></ion-input>
+      </ion-item>
+      <button ion-button block (click)="createProfile()">Create Profile</button>
+    </ion-list>  
+    </div>
 </ion-content>

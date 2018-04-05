@@ -18,11 +18,7 @@ export class SignupPage {
 
   // Navigating the user to the Login Page
   navigateToLoginPage() {
-    this.navCtrl.setRoot(LoginPage);
-  }
-  // Navigating the user to the Signup Page
-  navigateToSignupPage() {
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.setRoot(LoginPage, {}, { animate: true });
   }
 
 

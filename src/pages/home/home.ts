@@ -30,7 +30,7 @@ export class HomePage {
   }
   // Navigating the user to the AddOrder Page
   navigateToAddOrderPage() {
-    this.navCtrl.setRoot(AddOrderPage);
+    this.navCtrl.setRoot(AddOrderPage, {}, { animate: true });
   }
 
   ionViewWillLoad(){
@@ -53,7 +53,7 @@ export class HomePage {
 
   signOut() {
     this.afAuth.auth.signOut().then(() => {
-      this.navCtrl.setRoot(LoginPage)
+      this.navCtrl.setRoot(LoginPage, {}, { animate: true })
     });
     }
 
