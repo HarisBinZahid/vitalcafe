@@ -4,7 +4,7 @@ import { Profiles } from "../../models/profile/profile";
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { LoginPage } from '../login/login';
-import { HomePage } from '../home/home';
+import { AddOrderPage } from '../add-order/add-order';
 
 
 @IonicPage()
@@ -35,13 +35,13 @@ export class ProfilePage {
       this.afDatabase.object(`Profiles/${auth.uid}`).set(this.profile)
       .then(_ => this.showAlert("Your profile has been created successfully"))
       .then(() => {
-        this.navCtrl.setRoot(HomePage, {}, { animate: true })
+        this.navCtrl.setRoot(AddOrderPage, {}, { animate: true })
       });
     })
    }
 
   navigateToHomePage() { 
-    this.navCtrl.setRoot(HomePage, {}, { animate: true })
+    this.navCtrl.setRoot(AddOrderPage, {}, { animate: true })
 }
 
 

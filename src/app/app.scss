@@ -19,7 +19,16 @@
     background-image: url('assets/imgs/login-background.png');
     background-repeat: no-repeat !important;
     background-size: auto !important;
-    width:100% !important; 
-    height:100% !important;
+    width: 100vw !important;
+    height: 100vh !important;
     position: absolute;
+    // -webkit-filter: blur(10px);
+    // -moz-filter: blur(10px);
+    // -o-filter: blur(10px);
+    // -ms-filter: blur(10px);
+    // filter: blur(10px);
+}
+
+.content{
+        background-color: #f0dbd1;
 }

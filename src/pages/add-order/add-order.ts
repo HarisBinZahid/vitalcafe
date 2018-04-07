@@ -11,6 +11,9 @@ import { ViewOrderPage } from '../view-order/view-order';
   templateUrl: 'add-order.html',
 })
 export class AddOrderPage {
+  cart: any;
+  marketcloud: any;
+  configuration: any;
   orderItem: any;
   // Creating a new object
   OrderItem = {} as OrderItem
@@ -43,10 +46,12 @@ export class AddOrderPage {
     promise.then(_ => this.showAlert("Your order has been submitted successfully"))
       .catch(err => this.showAlert("Something went wrong please try again..!!"));
   }
-// Navigating the user to the Order Page
-  navigateToOrderPage() {
+// Navigating the user to the View Order Page
+  navigateToViewOrderPage() {
     this.navCtrl.push(ViewOrderPage, {}, { animate: true });
   }
+
+
 
   products = {
     tea: [

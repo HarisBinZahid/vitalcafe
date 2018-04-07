@@ -6,7 +6,8 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content class="content">
+  <!-- <img class="products-background-image" src="assets/imgs/products-background.jpg" alt="imagenotavailable"> -->
  <!-- <ion-list>
     <ion-item>
       <ion-label floating>Name</ion-label>
@@ -74,243 +75,399 @@
 
 <div [ngSwitch]="product">
 
-  <!-- Tea -->
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/Premium tea.png">
-            </ion-thumbnail>
-            <h6>Black Tea</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<!-- Tea -->
+  <ion-card class="items" *ngSwitchCase="'tea'">
+    <ion-card-header>
+       Black Tea
+    </ion-card-header>
+    <ion-card-content>
+      Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/Premium tea.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>        
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
 
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/Dawn.png">
-            </ion-thumbnail>
-            <h6>Dawn Mixture</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
 
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'tea'">
-            <ion-thumbnail item-start>
+    <ion-card class="items" *ngSwitchCase="'tea'">
+      <ion-card-header>
+         Dawn Mixture
+      </ion-card-header>
+      <ion-card-content>
+        Your cart is empty!
+      </ion-card-content>
+      <ion-list no-lines>
+        <ion-item class="items">
+          <ion-avatar item-left>
+            <img src="assets/imgs/Dawn.png">
+          </ion-avatar>
+          <div>
+            <button primary large>
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <button primary large>
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </div>
+        </ion-item>
+        <ion-item class="input">
+          <ion-input type="number" disabled></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-card-content>
+        <div></div>
+      </ion-card-content>
+    </ion-card>
+
+
+      <ion-card class="items" *ngSwitchCase="'tea'">
+        <ion-card-header>
+           Surhan Tea
+        </ion-card-header>
+        <ion-card-content>
+          Your cart is empty!
+        </ion-card-content>
+        <ion-list no-lines>
+          <ion-item class="items">
+            <ion-avatar item-left>
               <img src="assets/imgs/surhan.png">
-            </ion-thumbnail>
-            <h6>Surhan Tea</h6>
+            </ion-avatar>
+            <div>
+              <button primary large>
+                <ion-icon name="add"></ion-icon>
+              </button>
+              <button primary large>
+                <ion-icon name="remove"></ion-icon>
+              </button>
+            </div>
           </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'tea'">
-            <ion-input type="number"></ion-input>
+          <ion-item class="input">
+            <ion-input type="number" disabled></ion-input>
           </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-  <!-- /Tea -->
-
-
-  <!-- Green Tea -->
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-            <ion-item class="text" *ngSwitchCase="'green Tea'">
-              <ion-thumbnail item-start>
-                <img src="assets/imgs/Jasmine.png">
-              </ion-thumbnail>
-              <h6>Jasmine</h6>
-            </ion-item>
-        </ion-col>
-        <ion-col col-4>          
-            <ion-item *ngSwitchCase="'green Tea'">
-              <ion-input type="number"></ion-input>
-            </ion-item>          
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>  
-            <ion-item *ngSwitchCase="'green Tea'">
-              <ion-thumbnail item-start>
-                <img src="assets/imgs/Lemontea.png">
-              </ion-thumbnail>
-              <h6>Lemon Green Tea</h6>
-            </ion-item>        
-        </ion-col>
-        <ion-col col-4>    
-          <ion-item *ngSwitchCase="'green Tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>    
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <ion-grid>
-    <ion-row end>
-      <ion-col col-8>  
-          <ion-item *ngSwitchCase="'green Tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/Cardamom.png">
-            </ion-thumbnail>
-            <h6>Cardamom Green Tea</h6>
-          </ion-item>
-      </ion-col>
-      <ion-col col-4>    
-        <ion-item *ngSwitchCase="'green Tea'">
-          <ion-input type="number"></ion-input>
-        </ion-item>    
-      </ion-col>
-    </ion-row>
-    </ion-grid>  
+        </ion-list>
+        <ion-card-content>
+          <div></div>
+        </ion-card-content>
+      </ion-card>
+<!-- /Tea -->
 
 
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item *ngSwitchCase="'green Tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/Plain-green-tea.png">
-            </ion-thumbnail>
-            <h6>Plain Green Tea</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'green Tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<!-- Green Tea -->
+  <ion-card class="items" *ngSwitchCase="'green Tea'">
+    <ion-card-header>
+       Jasmine Green Tea
+    </ion-card-header>
+    <ion-card-content>
+      Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/Jasmine.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
 
-  <!-- /Green Tea -->
+    <ion-card class="items" *ngSwitchCase="'green Tea'">
+      <ion-card-header>
+         Lemon Green Tea
+      </ion-card-header>
+      <ion-card-content>
+        Your cart is empty!
+      </ion-card-content>
+      <ion-list no-lines>
+        <ion-item class="items">
+          <ion-avatar item-left>
+            <img src="assets/imgs/Lemontea.png">
+          </ion-avatar>
+          <div>
+            <button primary large>
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <button primary large>
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </div>
+        </ion-item>
+        <ion-item class="input">
+          <ion-input type="number" disabled></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-card-content>
+        <div></div>
+      </ion-card-content>
+    </ion-card>
 
 
-  <!-- Coffee -->
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'coffee'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/logo.png">
-            </ion-thumbnail>
-            <h6>Coffee</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'coffee'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  <!-- /Coffee
+  <ion-card class="items" *ngSwitchCase="'green Tea'">
+    <ion-card-header>
+        Cardamom Green Tea
+    </ion-card-header>
+    <ion-card-content>
+      Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/Cardamom.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
+  
+
+  <ion-card class="items" *ngSwitchCase="'green Tea'">
+    <ion-card-header>
+      Cardamom Green Tea
+    </ion-card-header>
+    <ion-card-content>
+       Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/Cardamom.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
+<!-- /Green Tea -->
 
 
-  <!-- Flavoured Tea -->
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'flavoured Tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/earl-gray.png">
-            </ion-thumbnail>
-            <h6>Earl Grey Tea</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'flavoured Tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'flavoured Tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/EnglishBreakfast.png">
-            </ion-thumbnail>
-            <h6>English Breakfast Tea</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'flavoured Tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'flavoured Tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/Ginger.png">
-            </ion-thumbnail>
-            <h6>Ginger Tea</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'flavoured Tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    
+<!-- Coffee -->
+    <ion-card class="items" *ngSwitchCase="'coffee'">
+      <ion-card-header>
+        Coffee
+      </ion-card-header>
+      <ion-card-content>
+         Your cart is empty!
+      </ion-card-content>
+      <ion-list no-lines>
+        <ion-item class="items">
+          <ion-avatar item-left>
+            <img src="assets/imgs/logo.png">
+          </ion-avatar>
+          <div>
+            <button primary large>
+              <ion-icon name="add"></ion-icon>
+            </button>
+            <button primary large>
+              <ion-icon name="remove"></ion-icon>
+            </button>
+          </div>
+        </ion-item>
+        <ion-item class="input">
+          <ion-input type="number" disabled></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-card-content>
+        <div></div>
+      </ion-card-content>
+    </ion-card>
+<!-- /Coffee
 
-    <ion-grid>
-      <ion-row end>
-        <ion-col col-8>
-          <ion-item class="text" *ngSwitchCase="'flavoured Tea'">
-            <ion-thumbnail item-start>
-              <img src="assets/imgs/Masala.png">
-            </ion-thumbnail>
-            <h6>Masala Tea</h6>
-          </ion-item>
-        </ion-col>
-        <ion-col col-4>
-          <ion-item *ngSwitchCase="'flavoured Tea'">
-            <ion-input type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  <!-- /Flavoured Tea -->
+
+<!-- Flavoured Tea -->
+  <ion-card class="items" *ngSwitchCase="'flavoured Tea'">
+    <ion-card-header>
+        Earl Grey Tea
+    </ion-card-header>
+    <ion-card-content>
+        Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/earl-gray.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="items" *ngSwitchCase="'flavoured Tea'">
+    <ion-card-header>
+        English Breakfast Tea
+    </ion-card-header>
+    <ion-card-content>
+      Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/EnglishBreakfast.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="items" *ngSwitchCase="'flavoured Tea'">
+    <ion-card-header>
+        Ginger Tea
+    </ion-card-header>
+    <ion-card-content>
+      Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/Ginger.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card class="items" *ngSwitchCase="'flavoured Tea'">
+    <ion-card-header>
+        Masala Tea
+    </ion-card-header>
+    <ion-card-content>
+      Your cart is empty!
+    </ion-card-content>
+    <ion-list no-lines>
+      <ion-item class="items">
+        <ion-avatar item-left>
+          <img src="assets/imgs/Masala.png">
+        </ion-avatar>
+        <div>
+          <button primary large>
+            <ion-icon name="add"></ion-icon>
+          </button>
+          <button primary large>
+            <ion-icon name="remove"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+      <ion-item class="input">
+        <ion-input type="number" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-card-content>
+      <div></div>
+    </ion-card-content>
+  </ion-card>
+<!-- /Flavoured Tea -->
 
 </div>
 
+<ion-card class="items">
+  <ion-card-content>
+    <button ion-button full (click)="navigateToViewOrderPage()">Checkout</button>
+  </ion-card-content>
+</ion-card>
+
+<ion-fab right bottom>
+  <button ion-fab color="primary">
+    <ion-icon name="cart"></ion-icon>
+  </button>
+</ion-fab>
 
 
-  <button ion-button block (click)="addOrderItem(OrderItem)">Submit</button>
 
-  <button ion-button block (click)="navigateToOrderPage()">View Orders</button>
+<!-- <button ion-button  (click)="addOrderItem(OrderItem)">Submit</button> -->
+
+<!-- <button ion-button  (click)="navigateToOrderPage()">View Orders</button> -->
 
 </ion-content>

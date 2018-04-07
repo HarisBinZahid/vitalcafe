@@ -25682,21 +25682,23 @@ ion-navbar.toolbar {
   background-image: url("assets/imgs/login-background.png");
   background-repeat: no-repeat !important;
   background-size: auto !important;
-  width: 100% !important;
-  height: 100% !important;
+  width: 100vw !important;
+  height: 100vh !important;
   position: absolute;
 }
 
-page-add-order .item ion-thumbnail {
-  min-width: 3rem;
-  min-height: 3rem;
+.content {
+  background-color: #f0dbd1;
 }
 
-page-add-order .item ion-thumbnail img {
-  max-width: 4rem;
-  min-width: 4rem;
-  max-height: 4rem;
-  min-height: 4rem;
+page-add-order .items {
+  background-color: #fff5e4;
+}
+
+page-add-order .input {
+  float: right;
+  width: 100px;
+  background-color: #fff5e4;
 }
 
 page-home .card-background-page ion-card {
